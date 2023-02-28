@@ -1,0 +1,28 @@
+/** Clothing_store
+jackets (5) (10.00), pink  
+tank tops (10), (20.00), blue
+jeans (15), (30.00), white
+shirts (7), (15).00, black
+shorts (6), (25.00), grey
+**/ 
+
+CREATE TABLE Clothing_store ( id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO Clothing_store VALUES (1, "jackets", 5, 10.00, "pink");
+INSERT INTO Clothing_store VALUES (2, "tank tops", 10, 20.00, "blue");
+INSERT INTO Clothing_store VALUES (3, "jeans", 15,30.00, "white");
+INSERT INTO Clothing_store VALUES (4, "shirts", 7,15.00, "black");
+INSERT INTO Clothing_store VALUES (5, "shorts", 6, 25.00, "grey");
+SELECT * FROM Clothing_store;
+
+show me all clothes that are less than 20.00?
+SELECT * FROM Clothing_store WHERE price <20.00; 
+
+--how many items are in stock?
+SELECT SUM(quantity) FROM Clothing_store;'
+
+--what is the total cost of each product?
+SELECT SUM (price) FROM Clothing_store;
+
+--list the price from most to least expensive.
+SELECT * FROM Clothing_store ORDER BY "price"; 
